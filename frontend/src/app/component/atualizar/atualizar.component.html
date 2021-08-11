@@ -1,0 +1,119 @@
+<mat-card>
+    <mat-card-title>Alterar colaborador</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome completo" [(ngModel)]="colaboradores.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="colaboradores.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Idade" [(ngModel)]="colaboradores.idade" name="idade">
+        </mat-form-field>
+        <li class="form-line" data-type="control_fileupload" id="id_53">
+            <label class="form-label form-label-left form-label-auto" id="label_53" for="input_53"> Anexar imagem.
+            </label>
+            <div id="cid_53" class="form-input">
+                <div data-wrapper-react="true">
+                    <div data-wrapper-react="true">
+                        <div class="qq-uploader-buttonText-value">
+                            Escolher imagem
+                        </div>
+                        <input type="file" id="input_53" name="q53_anexarCurriculo53[]" multiple=""
+                            class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="jpg, jpeg, png, gif"
+                            data-file-maxsize="10854" data-file-minsize="0" data-file-limit=""
+                            data-component="fileupload" />
+                    </div>
+                    <span style="display:none" class="cancelText">
+                        Cancel
+                    </span>
+                    <span style="display:none" class="ofText">
+                        of
+                    </span>
+                </div>
+            </div>
+        </li>
+
+        <mat-form-field>
+            <input matInput placeholder="Login" [(ngModel)]="colaboradores.login" name="login">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="senha" type="password" [(ngModel)]="colaboradores.senha" name="senha">
+        </mat-form-field>
+        <div id="passwordHelpBlock" class="form-text">
+            Sua senha deve ter de 8 a 20 caracteres, conter letras e números e não deve conter espaços, caracteres
+            especiais ou emoji.
+        </div>
+
+        <mat-form-field>
+            <div>Status</div>
+            <mat-select [(ngModel)]="status">
+                <mat-option hidden>SELECIONE</mat-option>
+                <mat-option *ngFor="let option3 of options3" [value]="option3.id">{{option3.status}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <div>Departamento</div>
+            <mat-select [(ngModel)]="departamento">
+                <mat-option hidden>SELECIONE</mat-option>
+                <mat-option *ngFor="let option of options" [value]="option.id">{{option.depar}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <div>Grupos</div>
+            <mat-select [(ngModel)]="grupos">
+                <mat-option hidden>SELECIONE</mat-option>
+                <mat-option *ngFor="let option2 of options2" [value]="option2.id">{{option2.grupo}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Redes-Sociais" [(ngModel)]="colaboradores.redes" name="redes">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="colaboradores.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Redes-Sociais" [(ngModel)]="colaboradores.redes" name="redes">
+        </mat-form-field>
+        <li class="form-line" data-type="control_fileupload" id="id_53">
+            <label class="form-label form-label-left form-label-auto" id="label_53" for="input_53"> Anexar currículo,
+                fichas, documentos e outros. </label>
+            <div id="cid_53" class="form-input">
+                <div data-wrapper-react="true">
+                    <div data-wrapper-react="true">
+                        <div class="qq-uploader-buttonText-value">
+                            Pesquisar Arquivos
+                        </div>
+                        <input type="file" id="input_53" name="q53_anexarCurriculo53[]" multiple=""
+                            class="form-upload-multiple" data-imagevalidate="yes"
+                            data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif"
+                            data-file-maxsize="10854" data-file-minsize="0" data-file-limit=""
+                            data-component="fileupload" />
+                    </div>
+                    <span style="display:none" class="cancelText">
+                        Cancel
+                    </span>
+                    <span style="display:none" class="ofText">
+                        of
+                    </span>
+                </div>
+            </div>
+        </li>
+
+    </form>
+</mat-card>
+
+
+
+<button mat-raised-button (click)="updateColaborador()" color="accent">
+    Atualizar
+</button>
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
