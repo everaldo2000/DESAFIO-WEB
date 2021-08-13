@@ -56,7 +56,7 @@ export class FormularioComponent implements OnInit {
     foto: "",
     login: "",
     senha: "",
-    departamento: "depart",
+    departamento: "",
     status: "",
     grupos: "",
     descricao: "",

@@ -27,6 +27,13 @@
       <input matInput placeholder="senha" type="password" [(ngModel)]="colaborador.senha" name="senha" required>
     </mat-form-field>
 
+    <div>Selecione</div>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="status" aria-required="true">
+        <mat-option *ngFor="let option of options3" [value]="option.id">{{option.status}}</mat-option>
+      </mat-select>
+    </mat-form-field>
 
     <div>Selecione</div>
     <mat-form-field>
@@ -41,7 +48,7 @@
       <mat-label>Grupo</mat-label>
       <mat-select [(ngModel)]="grupos" required="true">
         <mat-option hidden>SELECIONE</mat-option>
-        <mat-option *ngFor="let option2 of options2" [value]="option2.id">{{option2.grupo}}</mat-option>
+        <mat-option *ngFor="let option of options2" [value]="option.id">{{option.grupo}}</mat-option>
       </mat-select>
     </mat-form-field>
 
