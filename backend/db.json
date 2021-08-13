@@ -9,7 +9,7 @@
       "senha": "abc1234",
       "status": "1",
       "departamento": "3",
-      "grupos": "2",
+      "grupos": "3",
       "redes": "mariapaula@yahoo.com"
     },
     {
@@ -129,7 +129,7 @@
       "foto": "",
       "login": "",
       "senha": "",
-      "departamento": "",
+      "departamento": "depart",
       "status": "",
       "grupos": "",
       "descricao": "",

@@ -55,7 +55,7 @@ delete(id:number):Observable<colaborador>{
         catchError((e) => this.errorHandler(e))
       );
     }
-  
+    
     errorHandler(e: any): Observable<any> {
       this.showMessage("Ocorreu um erro!", true);
       return EMPTY;

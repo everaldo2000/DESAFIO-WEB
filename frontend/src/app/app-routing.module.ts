@@ -10,6 +10,8 @@ import { DeleteComponent } from './component/delete/delete.component';
 
 
 
+
+
 const routes: Routes = [{
 
 path:"",
@@ -36,7 +38,8 @@ component: HomeComponent
   path:"component/delete/:id",
 
   component: DeleteComponent
-}
+},
+
 ];
 
 @NgModule({

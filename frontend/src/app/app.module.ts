@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormularioComponent } from './component/formulario/formulario.component'
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http';
-import {FormBuilder, FormsModule, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, FormGroupDirective, FormsModule, NgForm, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatFormFieldModule, MatLabel} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { AddComponent } from './component/Views/add/add.component';
@@ -29,6 +29,10 @@ import { ListagemComponent } from './component/listagem/listagem.component';
 import { AtualizarComponent } from './component/atualizar/atualizar.component';
 import { DeleteComponent } from './component/delete/delete.component';
 import {MatSelectModule} from '@angular/material/select';
+
+
+
+
 
 
 
@@ -44,7 +48,9 @@ import {MatSelectModule} from '@angular/material/select';
     AddComponent,
     AtualizarComponent,
     DeleteComponent,
-  
+   
+    
+
 
   ],
   imports: [
@@ -65,7 +71,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
-  
+
   
   ],
   providers: [],

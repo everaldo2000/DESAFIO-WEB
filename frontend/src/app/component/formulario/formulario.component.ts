@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
 import { colaborador } from './formulario.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,8 +13,12 @@ import { colaborador } from './formulario.model';
 
 
 
-export class FormularioComponent implements OnInit {
 
+
+
+export class FormularioComponent implements OnInit {
+  createForm! :FormGroup;
+ 
 
 
 
@@ -60,9 +65,14 @@ export class FormularioComponent implements OnInit {
 
   }
   constructor(private serviveService: ServiceService,
-    private router: Router) { }
+    private router: Router) { 
+    }
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void{
+
+
+}
 
   createColaborador(): void {
     this.serviveService.create(this.colaborador).subscribe(() => {
@@ -73,8 +83,11 @@ export class FormularioComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/add'])
   }
-
 }
+
+
+
+
 
 
 
